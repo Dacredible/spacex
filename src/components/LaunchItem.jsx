@@ -4,9 +4,10 @@ import Moment from 'react-moment';
 import { Link } from 'react-router-dom';
 
 const LaunchItem = ({
-  launch: { flight_number, mission_name, launch_date_local, launch_success },
-}) => {
-  return (
+  launch: {
+    flight_number, mission_name, launch_date_local, launch_success,
+  },
+}) => (
     <div className="card card-body mb-3">
       <div className="row">
         <div className="col-md-9">
@@ -31,7 +32,6 @@ const LaunchItem = ({
         </div>
       </div>
     </div>
-  );
-};
+);
 
 export default LaunchItem;

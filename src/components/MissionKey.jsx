@@ -1,7 +1,6 @@
 import React from 'react';
 
-const MissionKey = () => {
-  return (
+const MissionKey = () => (
     <div className="my-3">
       <p>
         <span className="px-3 mr-2 bg-success" /> = Success
@@ -10,7 +9,6 @@ const MissionKey = () => {
         <span className="px-3 mr-2 bg-danger" /> = Fail
       </p>
     </div>
-  );
-};
+);
 
 export default MissionKey;
