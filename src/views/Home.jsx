@@ -19,6 +19,7 @@ export default class Home extends Component {
 
   render() {
     const { query, name } = this.state;
+    console.log(process.env.REACT_APP_USE_BACKEND);
     return (
       <div>
         <Launches query={query} name={name} />

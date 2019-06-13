@@ -16,7 +16,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="container">
+        <div className="App">
           <NavBar />
           <Route path="/" exact component={Home} />
           <Route path="/launch/:flight_number" exact component={Launch} />

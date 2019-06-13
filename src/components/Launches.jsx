@@ -16,28 +16,32 @@ import MissionKey from './MissionKey';
 // `;
 
 const Launches = ({ query, name }) => {
-  const LAUNCHES_QUERY = gql`
-    ${query}
-  `;
-  return (
-    <>
-      <h1 className="display-4 my-3">Launches</h1>
-      <MissionKey />
-      <Query query={LAUNCHES_QUERY}>
-        {({ loading, error, data }) => {
-          if (loading) return <h4>Loading...</h4>;
-          if (error) console.error(error);
-          return (
-            <>
-              {data[name].map(launch => (
-                <LaunchItem key={launch.flight_number} launch={launch} />
-              ))}
-            </>
-          );
-        }}
-      </Query>
-    </>
-  );
+  if (process.env.REACT_APP_USE_BACKEND === true) {
+    console.log('backend');
+    const LAUNCHES_QUERY = gql`
+      ${query}
+    `;
+    return (
+      <>
+        <h1 className="display-4 my-3">Launches</h1>
+        <MissionKey />
+        <Query query={LAUNCHES_QUERY}>
+          {({ loading, error, data }) => {
+            if (loading) return <h4>Loading...</h4>;
+            if (error) console.error(error);
+            return (
+              <>
+                {data[name].map(launch => (
+                  <LaunchItem key={launch.flight_number} launch={launch} />
+                ))}
+              </>
+            );
+          }}
+        </Query>
+      </>
+    );
+  }
+  return <div>no backend</div>;
 };
 
 export default Launches;
