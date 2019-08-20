@@ -21,9 +21,14 @@ export default class Home extends Component {
     const { query, name } = this.state;
     console.log(process.env.REACT_APP_USE_BACKEND);
     return (
-      <div>
-        <Launches query={query} name={name} />
-      </div>
+      <main>
+        <h1 className="main-title">SpaceX</h1>
+        <h2 className="page-title">
+          Cosmic
+          <br />
+          <span className="title__outline">Surfin</span>
+        </h2>
+      </main>
     );
   }
 }

@@ -1,0 +1,19 @@
+@import '../styles/variables';
+
+.main-title {
+  font-size: 36px;
+  line-height: 43px;
+  text-transform: uppercase;
+}
+
+.page-title {
+  font-family: $font-title;
+  font-size: 144px;
+  line-height: 130px;
+  text-transform: uppercase;
+
+  .title__outline {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+  }
+}
