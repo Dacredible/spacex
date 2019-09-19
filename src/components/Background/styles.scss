@@ -1,0 +1,30 @@
+.background__container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.video__container {
+  position: relative;
+  height: auto;
+  width: 100%;
+  max-width: 1400px;
+
+  .window-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: scale(1.01);
+  }
+
+  .video {
+    width: 100%;
+  }
+}

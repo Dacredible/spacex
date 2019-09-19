@@ -8,6 +8,16 @@
   height: 68px;
   display: flex;
   justify-content: space-between;
+
+  .logo__container {
+    width: 280px;
+    padding: 20px 40px 0;
+
+    .logo {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .nav-item__container {
@@ -22,4 +32,23 @@
   font-size: 18px;
   line-height: 20px;
   font-weight: normal;
+}
+
+.nav-item {
+  position: relative;
+
+  .active {
+    font-weight: 700;
+
+    &::after {
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      background-color: currentColor;
+      height: 8px;
+      width: 8px;
+      left: 40%;
+      bottom: -14px;
+    }
+  }
 }

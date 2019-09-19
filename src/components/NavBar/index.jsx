@@ -1,14 +1,24 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 import './styles.scss';
-import logo from '../../assets/logo--black.png';
+import logo from '../../assets/logo--white.png';
 
 const NavBar = () => (
   <header className="header">
-    <img src={logo} alt="SpaceX" style={{ width: 300, display: 'block' }} />
+    <div className="logo__container">
+      <img className="logo" src={logo} alt="SpaceX-logo" />
+    </div>
     <ul className="nav-item__container">
-      <li>Launches</li>
-      <li>Vehicles</li>
-      <li>About</li>
+      <li className="nav-item">
+        <NavLink to="/launches">Launches</NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink to="/vehicles">Vehicles</NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink to="/about">About</NavLink>
+      </li>
     </ul>
   </header>
 );
