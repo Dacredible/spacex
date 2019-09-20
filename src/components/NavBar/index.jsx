@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './styles.scss';
-import logo from '../../assets/logo--white.png';
+import logo from '../../assets/spacex_logo.svg';
 
 const NavBar = () => (
   <header className="header">
