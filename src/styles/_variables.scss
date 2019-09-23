@@ -6,6 +6,12 @@ $color-form: #a9a9a9;
 $color-text-secondary: #646464;
 $color-accent: #f9c739;
 
+// fonts
+$font-title: 'Space Mono',
+'Helvetica';
+
+// components
+$header-height: 80px;
 
 // Screen size variables
 $screen-xs-min: 300px; // Tiny phones
@@ -13,10 +19,6 @@ $screen-sm-min: 576px; // Small tablets and large smartphones (landscape view)
 $screen-md-min: 768px; // Small tablets (portrait view)
 $screen-lg-min: 992px; // Tablets and small desktops
 $screen-xl-min: 1200px; // Large tablets and desktops
-
-// fonts
-$font-title: 'Space Mono',
-'Helvetica';
 
 // Mixins
 

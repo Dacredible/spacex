@@ -1,0 +1,26 @@
+@import '../styles/variables';
+
+.launch-latest {
+  position: relative;
+  display: block;
+  height: calc(100vh - #{$header-height});
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.launch-status {
+  border: 1px solid;
+  border-radius: 30px;
+}
+
+.status-success {
+  border-color: #7BDADA;
+}
+
+.status-fail {
+  border-color: red;
+}

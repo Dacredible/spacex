@@ -8,13 +8,13 @@ import testData from '../testdata.json';
 const preprocess = (launchesArray) => {
   const processedArray = [...launchesArray];
   processedArray.reverse();
-  const latestLaunch = processedArray[0];
+  return processedArray;
 };
 
 const LaunchesData = ({ query, name }) => {
   if (process.env.REACT_APP_USE_BACKEND === 'false') {
-    preprocess(testData.data.past);
-    return <div>no backend</div>;
+    const launchesArray = preprocess(testData.data.past);
+    return launchesArray;
   }
   console.log('backend enabled');
   const LAUNCHES_QUERY = gql`
